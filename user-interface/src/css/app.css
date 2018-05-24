@@ -66,6 +66,13 @@ h5 {
 .nc-minimal-btn-shadow {
   box-shadow: 0 0 0 1px rgba(19, 124, 189, 0.15) !important;
 }
+body {
+  background: #f2f3fd;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  content: "";
+}
 .NCNonIdealState .pt-non-ideal-state {
   max-width: none;
 }
@@ -106,6 +113,9 @@ h5 {
   margin-top: 15px;
   font-weight: 300;
 }
+.pt-intent-primary {
+  color: #5af0bd !important;
+}
 .NCKPIGroup {
   display: inline-block;
   margin: 10px;
@@ -113,7 +123,7 @@ h5 {
   text-align: left;
 }
 .NCKPIGroup .group-title {
-  color: #5c7080;
+  color: #5af0bd;
   display: block;
   font-size: 19px;
   margin: 0 0 15px 0;
@@ -124,7 +134,7 @@ h5 {
 .NCKPIGroup .group-title strong {
   font-family: inherit;
   font-weight: 400;
-  color: #182026;
+  color: white;
 }
 .NCKPIGroup .NCKPI:not(:last-of-type) {
   margin-right: 15px;
@@ -164,11 +174,11 @@ h5 {
   justify-content: center;
 }
 .NCKPIGroup .NCKPI .kpi-card > .metric .value {
-  color: #137cbd;
+  color: #4221cc;
 }
 .NCKPIGroup .NCKPI .kpi-card > .metric .units {
   margin-left: 2px;
-  color: #137cbd;
+  color: #4221cc;
 }
 .NCKPIGroup .NCKPI .kpi-card > .title {
   font-family: 'Titillium Web', sans-serif;
@@ -204,6 +214,8 @@ h5 {
   margin-top: 15px;
 }
 .NCDashboard .NCKPIContainer .NCKPIGroup {
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.1);
+  background-color: #12173A;
   padding: 15px;
 }
 .NCDashboard .NCKPIContainer .NCKPIGroup .group-title {
@@ -377,10 +389,13 @@ h5 {
   margin-right: 6px;
 }
 .NCCardBlock .block-card .proposer .NCEntityLabel {
-  color: #106ba3;
+  color: #4221cc;
   flex: 1;
   width: 50px;
   display: flex;
+}
+.NCCardBlock .block-card .proposer .NCEntityLabel:hover .text {
+  color: #4221cc !important;
 }
 .NCCardBlock .block-card .proposer .NCEntityLabel .text {
   flex: 1;
@@ -925,7 +940,7 @@ pre {
 }
 .NCEntityLabel .icon {
   line-height: inherit;
-  color: #5c7080;
+  color: #4221cc;
 }
 .NCEntityLabel .text {
   line-height: inherit;
@@ -935,7 +950,7 @@ pre {
   cursor: pointer;
 }
 .NCEntityLabel.active:hover .text {
-  color: #106ba3;
+  color: #12173A;
   text-decoration: underline;
 }
 .NCLink {
@@ -974,7 +989,7 @@ pre {
     }*/
   padding-bottom: 5px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #8a9ba8;
+  border-bottom: 1px solid #5af0bd;
   display: flex;
   justify-content: space-between;
 }
@@ -983,8 +998,8 @@ pre {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #106ba3;
-  font-weight: 200;
+  color: #4221cc;
+  font-weight: 400;
 }
 .NCTitle.card {
   display: flex;
@@ -1334,6 +1349,7 @@ pre {
   width: 100%;
   padding: 0;
   height: 45px;
+  background-color: #12173A;
 }
 .NCHeader .row {
   margin: 0 auto;
@@ -1365,24 +1381,25 @@ pre {
   font-family: 'Titillium Web', sans-serif;
   font-size: 21px;
   margin: 0 0px 0 3px;
-  color: #394b59;
+  color: #5af0bd;
 }
 .NCHeader .row .navbar-group-left .pt-navbar-divider {
   margin-right: 15px;
   margin-left: 12px;
+  border-left: 1px solid #ffffffad;
 }
 .NCHeader .row .pt-icon-caret-down {
   margin-left: 5px;
   margin-right: -2px;
-  color: #106ba3;
+  color: #5af0bd;
 }
 .NCHeader .row .navbar-btn-active {
-  color: #106ba3 !important;
-  box-shadow: 0 0 0 1px rgba(19, 124, 189, 0.15);
+  color: #5af0bd !important;
+  box-shadow: 0 0 0 1px rgba(90, 240, 189, 0.28);
   margin-right: 15px;
 }
 .NCHeader .row .navbar-btn-active:before {
-  color: #106ba3 !important;
+  color: #5af0bd !important;
 }
 .NCHeader .row .navbar-group-right {
   flex: 1;
@@ -1392,6 +1409,7 @@ pre {
 .NCHeader .row .navbar-group-right .pt-navbar-divider {
   margin-right: 5px;
   margin-left: 10px;
+  border-left: 1px solid #ffffffad;
 }
 .NCHeader .row .navbar-group-right .NCTopLevelSearch {
   flex: 1;
@@ -1473,7 +1491,7 @@ pre {
 }
 .NCLivenessIndicator .liveness-btn .icon.live {
   font-size: 24px;
-  color: #15b371;
+  color: #5af0bd;
 }
 .NCLivenessIndicator .liveness-btn .icon.warning {
   font-size: 24px;
@@ -1697,10 +1715,15 @@ pre {
 .NCNavMenu .pt-menu-header > h6 {
   font-size: 15px;
   font-weight: 400;
+  color: #4221cc;
 }
 .NCNavMenu .nav-option {
   font-weight: 300;
   padding: 9px 7px;
+}
+.pt-menu-item::before,
+.pt-menu-item::after {
+  color: #4221cc;
 }
 .NCGraphZoom {
   fill: none;
@@ -2057,8 +2080,9 @@ pre {
   padding-right: 10px;
 }
 .NCTableTransactionsRT .header {
-  background-color: #f5f8fa;
-  font-weight: 500;
+  background-color: #12173A;
+  color: white;
+  font-weight: 400;
   border-bottom: 1px solid #8a9ba8;
 }
 .NCTableTransactionsRT .header .txn-arrow .pt-icon-arrow-right {
@@ -2073,9 +2097,10 @@ pre {
 }
 .NCTableTransactionsRT .body.table-row {
   cursor: pointer;
+  background-color: white;
 }
 .NCTableTransactionsRT .body.table-row:hover {
-  background: rgba(19, 124, 189, 0.15);
+  background-color: rgba(167, 182, 194, 0.3);
 }
 .NCTableTransactionsRT .body .column {
   padding-left: 2px;

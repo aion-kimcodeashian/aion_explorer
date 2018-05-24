@@ -39,20 +39,23 @@
   justify-content: center;
   align-items: center;
 
-  .spinner-container 
+  .spinner-container
   {
     display: inline-block;
     text-align: center;
-    
-    .title 
+
+    .title
     {
       display: block;
       margin-top: 15px;
       font-weight: 300;
     }
-  }  
+  }
 }
-
+.pt-intent-primary
+{
+  color: @teal !important;
+}
 .NCKPIGroup
 {
   display: inline-block;
@@ -62,7 +65,8 @@
 
   .group-title
   {
-    color: @pt-icon-color;
+    // color: @pt-icon-color;
+    color: @teal;
     display: block;
     font-size: 19px;
     margin: 0 0 15px 0;
@@ -73,7 +77,8 @@
     strong {
       font-family: inherit;
       font-weight: 400;
-      color: @pt-heading-color;
+      // color: @pt-heading-color;
+      color: white;
     }
   }
 
@@ -89,7 +94,7 @@
       text-align: center;
       display: inline-block;
 
-      &>.error 
+      &>.error
       {
         height: 65px;
 
@@ -113,7 +118,7 @@
           font-size: 11px;
         }
       }
-      &>.metric 
+      &>.metric
       {
         font-size: 24px;
         display: block;
@@ -123,14 +128,16 @@
         justify-content: center;
 
         .value {
-          color: @pt-intent-primary;
+          // color: @pt-intent-primary;
+          color: @purple;
         }
         .units {
           margin-left: 2px;
-          color: @pt-intent-primary;
+          // color: @pt-intent-primary;
+          color: @purple;
         }
       }
-      &>.title 
+      &>.title
       {
         .titillium;
         color: @pt-icon-color;
@@ -142,7 +149,7 @@
 }
 
 
-.NCKPIGroupSmall 
+.NCKPIGroupSmall
 {
   padding: 15px;
 
@@ -176,15 +183,17 @@
 .NCDashboard
 {
   padding: 0px 30px 20px 30px;
-  flex: 1; 
+  flex: 1;
 
-  .NCKPIContainer 
+  .NCKPIContainer
   {
     text-align: center;
     margin-top: 15px;
 
     .NCKPIGroup
     {
+      box-shadow: 0 0 12px 1px rgba(0,0,0,.1);
+      background-color: @indigo;
       .NCKPIGroupSmall;
     }
   }
@@ -194,7 +203,7 @@
     .clearfix;
     margin: 25px 0 0 0;
 
-    .NCRecentTransactionsContainer 
+    .NCRecentTransactionsContainer
     {
       display: inline-block;
       width: 67%;
@@ -203,7 +212,7 @@
       min-height: 450px;
     }
 
-    .NCRecentBlocksContainer 
+    .NCRecentBlocksContainer
     {
       display: inline-block;
       width: 33%;
@@ -216,9 +225,9 @@
 
   @media screen and (max-width: 1180px)
   {
-    .NCKPIContainer 
+    .NCKPIContainer
     {
-      .NCKPIGroupDivider:nth-of-type(1) { 
+      .NCKPIGroupDivider:nth-of-type(1) {
         display: block;
       }
     }
@@ -241,7 +250,7 @@
         float: none;
         padding: 0 20px 0 20px;
       }
-    } 
+    }
   }
 }
 
@@ -253,7 +262,7 @@
   padding-bottom: 130px;
   overflow: hidden;
 
-  .block-bridge 
+  .block-bridge
   {
     display: inline-block;
     position: absolute;
@@ -263,7 +272,7 @@
     top: 45px;
   }
 
-  .block-bridged-dotted 
+  .block-bridged-dotted
   {
     display: inline-block;
     position: absolute;
@@ -274,13 +283,13 @@
   }
 
   @media screen and (max-width: 1180px)
-  { 
-    .block-bridge 
+  {
+    .block-bridge
     {
       height: 485px;
     }
 
-    .block-bridged-dotted 
+    .block-bridged-dotted
     {
       top: 530px;
     }
@@ -384,7 +393,7 @@
         .titillium;
       }
     }
-    .proposer 
+    .proposer
     {
       margin-bottom: 5px;
       font-size: 13px;
@@ -399,11 +408,16 @@
 
       .NCEntityLabel
       {
-        color: @pt-link-color;
+        // color: @pt-link-color;
+        color: @purple;
         flex: 1;
         width: 50px;
         display: flex;
-
+        &:hover {
+          .text {
+            color: @purple !important;
+          }
+        }
         .text {
           flex: 1;
           margin-left: 4px;
@@ -411,7 +425,7 @@
         }
       }
     }
-    .transaction-count 
+    .transaction-count
     {
       font-size: 13px;
 
@@ -459,11 +473,11 @@
 
 }
 
-.NCTimescale 
+.NCTimescale
 {
   display: inline-block;
 
-  &.medium 
+  &.medium
   {
     .pt-tag {
       padding: 4px 9px;
@@ -474,7 +488,7 @@
     .pt-icon-arrow-right {
       font-size: 16px;
     }
-    
+
     &>*:not(:last-child) {
       margin-right: 10px;
     }
@@ -490,7 +504,7 @@
   .pt-icon-arrow-right {
     font-size: 16px;
   }
-  
+
   &>*:not(:last-child) {
     margin-right: 10px;
   }
@@ -508,7 +522,7 @@
   display: block;
   margin-bottom: 12px;
 
-  .row-count 
+  .row-count
   {
     float: left;
     margin-top: 5px;
@@ -518,12 +532,12 @@
     }
   }
 
-  .table-paging 
+  .table-paging
   {
     float: right;
     display: flex;
     align-items: center;
-    
+
     &>.context {
       font-size: 13px;
       margin: 0 12px;
@@ -531,7 +545,7 @@
       font-weight: 300;
     }
 
-    &>.pt-button 
+    &>.pt-button
     {
       &.right {
         padding-right: 7px;
@@ -552,15 +566,15 @@
       font-size: 13px;
       line-height: @table-paging-height;
       height: @table-paging-height;
-      
+
       min-width: auto;
       min-height: auto;
     }
-    
+
   }
 }
 
-.NCTableWrapper 
+.NCTableWrapper
 {
   padding: 0 10px;
 }
@@ -579,7 +593,7 @@
   }
 }
 
-pre 
+pre
 {
   background-color: @blueprint-docs-color;
   border-color: @gray4;
@@ -590,14 +604,14 @@ pre
 .nc-resizable {
   resize: vertical;
   overflow: auto;
-  white-space: pre-wrap; 
+  white-space: pre-wrap;
   word-wrap: break-word;
   &.enforce-min-height {
     height: 88px;
   }
 }
 
-.NCTable 
+.NCTable
 {
   @table-row-height: 35px;
 
@@ -641,7 +655,7 @@ pre
     line-height: 24px;
     padding: 4px 0 0 0;
 
-    .header-icon 
+    .header-icon
     {
       font-size: 14px;
       margin-right: 6px;
@@ -649,7 +663,7 @@ pre
     }
   }
 
-  .NCColumnHeaderFilter 
+  .NCColumnHeaderFilter
   {
     padding: 0 5px 4px 5px;
 
@@ -659,7 +673,7 @@ pre
       line-height: 36px;
       margin: 0 0 0 10px;
     }
-    
+
     input {
       height: 26px;
       line-height: 26px;
@@ -667,9 +681,9 @@ pre
       font-weight: 300;
       padding: 0 4px 0 24px !important;
 
-      &:focus 
+      &:focus
       {
-        box-shadow: 0 0 0 1px #137cbd, inset 0 1px 1px rgba(16, 22, 26, 0.2); 
+        box-shadow: 0 0 0 1px #137cbd, inset 0 1px 1px rgba(16, 22, 26, 0.2);
       }
     }
   }
@@ -677,9 +691,9 @@ pre
 
 // NCTable custom styles
 
-.NCTable 
+.NCTable
 {
-  .arrow-cell 
+  .arrow-cell
   {
     height: 100%;
     display: flex;
@@ -691,12 +705,12 @@ pre
     }
   }
 
-  .deep-link 
+  .deep-link
   {
     padding-right: 0;
     padding-left: 0;
 
-    .container 
+    .container
     {
       display: flex;
       height: 100%;
@@ -704,7 +718,7 @@ pre
       align-items: center;
       //padding: 3px 3px 4px 3px;
 
-      .pt-button 
+      .pt-button
       {
         border-radius: 0px;
         line-height: inherit;
@@ -729,20 +743,22 @@ pre
 
   .icon {
     line-height: inherit;
-    color: @pt-icon-color
+    // color: @pt-icon-color
+    color: @purple;
   }
-  
+
   .text {
     line-height: inherit;
     margin-left: 6px;
   }
 
   &.active {
-    &:hover 
+    &:hover
     {
       cursor: pointer;
       .text {
-        color: @pt-link-color;
+        // color: @pt-link-color;
+        color: @indigo;
         text-decoration: underline;
       }
     }
@@ -756,13 +772,13 @@ pre
   width: 100%;
   align-items: center;
   overflow: hidden;
-  
+
   .text {
     line-height: inherit;
   }
 
   &.enabled {
-    &:hover 
+    &:hover
     {
       cursor: pointer;
       .text {
@@ -776,7 +792,7 @@ pre
 
 .NCTitle
 {
-  &.page 
+  &.page
   {
     margin-bottom: 20px;
 
@@ -799,7 +815,7 @@ pre
 
     padding-bottom: 5px;
     margin-bottom: 15px;
-    border-bottom: 1px solid @gray3;
+    border-bottom: 1px solid @teal;
     display: flex;
     justify-content: space-between;
 
@@ -809,12 +825,13 @@ pre
       font-size: 18px;
       line-height: 30px;
       text-transform: uppercase;
-      color: @pt-link-color;
-      font-weight: 200;
+      // color: @pt-link-color;
+      color: @purple;
+      font-weight: 400;
     }
   }
 
-  &.card 
+  &.card
   {
     display: flex;
     justify-content: space-between;
@@ -830,17 +847,17 @@ pre
 }
 
 .NCTxnRealtime {
-  padding-top: 20px;  
+  padding-top: 20px;
 }
 
 .NCSearchPanel
 {
-  .NCTitle.card 
+  .NCTitle.card
   {
     margin-bottom: 35px;
   }
 
-  .controls-container 
+  .controls-container
   {
     display: block;
 
@@ -849,9 +866,9 @@ pre
       display: flex;
       align-items: center;
 
-      .label 
+      .label
       {
-        display: inline-block; 
+        display: inline-block;
         margin-right: 15px;
       }
 
@@ -862,23 +879,23 @@ pre
       }
     }
 
-    &>.date-range 
+    &>.date-range
     {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
 
-      .label 
+      .label
       {
-        display: inline-block; 
+        display: inline-block;
         margin-right: 15px;
       }
 
-      .all-time 
+      .all-time
       {
         display: inline-block;
         border-left: 1px solid @border-color;
-        
+
         padding-left: 20px;
         margin-left: 20px;
 
@@ -897,7 +914,7 @@ pre
 
 
 
-    &>.input-field 
+    &>.input-field
     {
       display: flex;
       align-items: center;
@@ -915,9 +932,9 @@ pre
     }
   }
 
-  .searchbtn-container 
+  .searchbtn-container
   {
-    text-align: right; 
+    text-align: right;
     margin-top: 40px;
     &>* {
       display: inline-block;
@@ -925,19 +942,19 @@ pre
 
      .search-btn {
       margin-left: 10px;
-    }  
+    }
   }
 
   @media (max-width: 875px)
   {
-    .controls-container 
+    .controls-container
     {
-      &>.date-range 
+      &>.date-range
       {
-        .all-time 
+        .all-time
         {
           border-left: none;
-        
+
           padding-left: 0px;
           margin-left: 132px;
           margin-top: 10px;
@@ -947,7 +964,7 @@ pre
   }
 }
 
-.NCSearchPanel-tooltip 
+.NCSearchPanel-tooltip
 {
   max-width: 650px;
 
@@ -960,11 +977,11 @@ pre
 
 
 
-.NCDateRangeInput 
+.NCDateRangeInput
 {
   display: inline-block;
 
-  .date-range 
+  .date-range
   {
     display: inline-block;
     vertical-align: baseline;
@@ -975,7 +992,7 @@ pre
     }
   }
 
-  .daterange-popover-target 
+  .daterange-popover-target
   {
     display: inline-block;
     vertical-align: middle;
@@ -987,7 +1004,7 @@ pre
   }
 }
 
-.NCDateRangeInput-popover 
+.NCDateRangeInput-popover
 {
   .pt-popover-content {
     padding: 15px;
@@ -997,9 +1014,9 @@ pre
 
 // Nodes Pages
 
-.NCNodesOverviewMap 
+.NCNodesOverviewMap
 {
-  .NCMapOverview 
+  .NCMapOverview
   {
     height: 500px;
   }
@@ -1007,7 +1024,7 @@ pre
 
 .NCNodesOverview {
 
-  &>.pt-card 
+  &>.pt-card
   {
     padding: 15px 20px 10px 20px;
     margin-bottom: 25px;
@@ -1016,7 +1033,7 @@ pre
       margin-bottom: 10px;
     }
 
-    .NCKPIContainer 
+    .NCKPIContainer
     {
       text-align: center;
 
@@ -1027,7 +1044,7 @@ pre
     }
   }
 
-  
+
 
   .NCTitle.section {
     margin-top: 35px;
@@ -1035,9 +1052,9 @@ pre
   }
 }
 
-.NCNodesRetrieve 
+.NCNodesRetrieve
 {
-  .NCMapDetails 
+  .NCMapDetails
   {
     margin-top: 30px;
     height: 500px;
@@ -1093,21 +1110,21 @@ pre
   }
 }
 
-.NCPathMarkerPopover 
+.NCPathMarkerPopover
 {
   margin-bottom: 10px !important;
-  .pt-popover-content 
+  .pt-popover-content
   {
-    .NCConnDescription 
+    .NCConnDescription
     {
-      .name 
+      .name
       {
         .arrow {
           margin: 0 8px;
         }
       }
 
-      .node 
+      .node
       {
         line-height: 18px;
         .source,.sink {
@@ -1122,7 +1139,7 @@ pre
         }
       }
 
-      .latency 
+      .latency
       {
         font-size: 13px;
         margin-top: 5px;
@@ -1144,13 +1161,13 @@ pre
   }
 }
 
-.NCNodeMarkerPopover 
+.NCNodeMarkerPopover
 {
   margin-bottom: 10px !important;
 
-  .pt-popover-content 
+  .pt-popover-content
   {
-    .NCNodeDescription 
+    .NCNodeDescription
     {
       .ip {
         color: @pt-icon-color;
@@ -1187,20 +1204,20 @@ pre
 }
 
 // basic maps styles
-.NCMap 
+.NCMap
 {
   .ncmap-container { // flex container
     height: 100%;
   }
-  
+
   .ncmap-element { // border around map element
-    height: 100%; 
+    height: 100%;
     border-radius: 5px;
     box-shadow: 0 0 0 1px @border-color;
   }
 
   // remove google-injected attributes:
-  
+
   a[href^="http://maps.google.com/maps"]{display:none !important} // google logo
   a[href^="https://maps.google.com/maps"]{display:none !important}
 
@@ -1218,17 +1235,17 @@ pre
     }
   }
 
-  .ncmap-marker 
+  .ncmap-marker
   {
     //border: 1px solid red;
     position: relative;
     z-index: 2;
 
-    .marker-click-target 
+    .marker-click-target
     {
       cursor: pointer;
     }
-    .circle-marker 
+    .circle-marker
     {
       position: absolute;
       top: 50%;
@@ -1275,12 +1292,12 @@ pre
     @keyframes pulsate {
       from {
         opacity: 1;
-        transform: scale(1); 
+        transform: scale(1);
       }
       to {
         opacity: 0;
-       transform: scale(3); 
-      } 
+       transform: scale(3);
+      }
     }
   }
 }
@@ -1297,6 +1314,7 @@ pre
   width: 100%;
   padding: 0;
   height: @header-height;
+  background-color: @indigo;
 
   .row
   {
@@ -1320,7 +1338,7 @@ pre
         margin: 0 10px 0 0;
       }
 
-      .logo 
+      .logo
       {
         display: inline-flex;
         align-items: center;
@@ -1337,29 +1355,35 @@ pre
         .titillium;
         font-size: 21px;
         margin: 0 0px 0 3px;
-        color: @dark-gray5;
+        // color: @dark-gray5;
+        color: @teal;
       }
 
       .pt-navbar-divider {
         margin-right: 15px;
         margin-left: 12px;
+        border-left: 1px solid #ffffffad;
       }
     }
 
     .pt-icon-caret-down {
       margin-left: 5px;
       margin-right: -2px;
-      color: @blue2;
+      // color: @blue2;
+      color: @teal;
     }
 
-    .navbar-btn-active 
-    {    
+    .navbar-btn-active
+    {
       &:before {
-        color: @blue2 !important;
+        // color: @blue2 !important;
+        color: @teal !important;
       }
-      color: @blue2 !important;
-      
-      box-shadow: 0 0 0 1px @muted-blue;
+      // color: @blue2 !important;
+      color: @teal !important;
+
+      // box-shadow: 0 0 0 1px @muted-blue;
+      box-shadow: 0 0 0 1px @muted-teal;
 
       margin-right: 15px;
     }
@@ -1373,6 +1397,7 @@ pre
       .pt-navbar-divider {
         margin-right: 5px;
         margin-left: 10px;
+        border-left: 1px solid #ffffffad;
       }
 
       .NCTopLevelSearch {
@@ -1401,7 +1426,7 @@ pre
     }
   }
 
-  @media (max-width: @tablet-breakpoint) 
+  @media (max-width: @tablet-breakpoint)
   {
     .row {
       .navbar-group-left {
@@ -1463,7 +1488,7 @@ pre
     padding: @header-height 0px @footer-height 0px;
 
     min-height: 100vh;
-    //display: flex; 
+    //display: flex;
 
     &>* {
       //flex: 1;
@@ -1486,7 +1511,7 @@ pre
   {
     margin-right: 6px;
 
-    .icon 
+    .icon
     {
       display: inline-block;
       vertical-align: middle;
@@ -1501,26 +1526,27 @@ pre
       &.live
       {
         font-size: 24px;
-        color: @green4; 
+        // color: @green4;
+        color: @teal;
       }
 
       &.warning
       {
         font-size: 24px;
-        color: @orange4; 
+        color: @orange4;
       }
     }
     .text {
       //margin-left: 10px;
       //font-weight: 300;
-    }  
+    }
   }
 }
 
 .NCLivenessIndicator-Popover
 {
   margin-top: 14px !important;
-  
+
   .pt-popover-content {
     padding: 15px;
     max-width: none !important;
@@ -1529,7 +1555,7 @@ pre
     {
       .no-data
       {
-        &>* 
+        &>*
         {
           display: inline-block;
           vertical-align: middle;
@@ -1564,7 +1590,7 @@ pre
         {
           width: auto;
 
-          .text 
+          .text
           {
             font-weight: 300;
           }
@@ -1604,13 +1630,13 @@ pre
     font-weight: 400;
   }
 
-  .row 
+  .row
   {
     display: flex;
     line-height: 35px;
     overflow: hidden;
 
-    .field 
+    .field
     {
       display: inline-block;
       width: 140px;
@@ -1621,7 +1647,7 @@ pre
       }
     }
 
-    .value 
+    .value
     {
       display: inline-block;
       flex: 1;
@@ -1641,9 +1667,9 @@ pre
   }
 }
 
-.NCNodesRetrieve 
+.NCNodesRetrieve
 {
-  .NCSearchPanel > .pt-card 
+  .NCSearchPanel > .pt-card
   {
     padding-bottom: 35px;
   }
@@ -1663,13 +1689,13 @@ pre
   }
 }
 
-.nc-icon 
+.nc-icon
 {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px !important;
   margin-bottom: 3px;
-  
+
   &.pt-icon-warning-sign
   {
     font-size: 22px;
@@ -1678,21 +1704,21 @@ pre
   &.ok
   {
     font-size: 24px;
-    color: @green4; 
+    color: @green4;
   }
 
   &.warning
   {
     font-size: 24px;
-    color: @orange4; 
+    color: @orange4;
   }
 
   &.danger
   {
     font-size: 24px;
-    color: @red4; 
+    color: @red4;
   }
-} 
+}
 
 
 
@@ -1719,7 +1745,7 @@ pre
     }
 
     .title-row {
-      
+
       border-bottom: 1px solid rgb(221, 222, 222);
       @padding-bottom: 12px;
       @btn-offset: 2px;
@@ -1764,7 +1790,7 @@ pre
 
             flex-grow: 1;
             min-width: 0;
-            
+
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -1777,7 +1803,7 @@ pre
       .right {
         display: inline-flex;
         align-self: flex-end;
-        
+
         .updated {
           vertical-align: bottom;
           white-space: nowrap;
@@ -1785,14 +1811,14 @@ pre
             padding-bottom: 5px;
             font-size: 13px;
             font-weight: 300;
-            padding-right: 8px; 
+            padding-right: 8px;
             display: inline-block;
           }
           .NCTimescale {
             display: inline-block;
           }
         }
-        
+
       }
     }
   }
@@ -1828,9 +1854,15 @@ pre
   .pt-menu-header > h6 {
     font-size: 15px;
     font-weight: 400;
+    color: @purple;
   }
   .nav-option {
     font-weight: 300;
     padding: 9px 7px;
   }
+}
+
+.pt-menu-item::before, .pt-menu-item::after
+{
+  color: #4221cc
 }

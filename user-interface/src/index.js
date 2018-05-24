@@ -40,31 +40,31 @@ ReactDOM.render((
   <Provider store={ store }>
     <Router onUpdate={() => window.scrollTo(0, 0)} history={ hashHistory }>
       <Route path="/" component={ Layout }>
-        
+
         <IndexRedirect to="dashboard"/>
         <Route path="dashboard" component={ Dashboard }/>
 
-        {/* 
-            Support 2 kind(s) of block lists: 
-              1. /blocks                => All blocks 
+        {/*
+            Support 2 kind(s) of block lists:
+              1. /blocks                => All blocks
               2. /blocks?account={...}  => Mined by address
         */}
         <Route path="blocks" component={ BlkList }/>
         <Route path="block/:blkId" component={ BlkRetrieve }/>
 
-        {/* 
-            Support 3 kind(s) of transation lists: 
+        {/*
+            Support 3 kind(s) of transation lists:
               1. /transactions          => All transactions 
               2. /transactions?block    => Transactions in block
               3. /transactions?account  => Transactions by account
         */}
         <Route path="transactions" component={ TxnList }/>
         <Route path="transaction/:txnId" component={ TxnRetrieve }/>
-        
-        {/* 
-            Support 1 kind(s) of account lists: 
-              1. /accounts  => All accounts 
-            Temporarily suspended due to no support from backend service. 
+
+        {/*
+            Support 1 kind(s) of account lists:
+              1. /accounts  => All accounts
+            Temporarily suspended due to no support from backend service.
             This accounts list view will be the equivalent of the "rich list" once we write the backend service to support it
         */}
         {/*<Route path="accounts" component={ AccList }/>*/}
@@ -77,37 +77,3 @@ ReactDOM.render((
     </Router>
   </Provider>), document.getElementById('root')
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

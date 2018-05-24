@@ -22,7 +22,7 @@ export default class NCCardBlock extends Component
     return (
       <div className="NCCardBlock">
 
-        <img className="block-child" src={ isEmpty ? "img/block/block-grey.svg" : "img/block/block-blue.svg" }/>
+        <img className="block-child" src={ isEmpty ? "img/block/block-grey.svg" : "img/block/block-indigo.svg" }/>
         <div className={"block-card card-hover "+(isEmpty ? "" : "non-empty-block") }>
           <div className="block-number">
             <span className="subtitle pt-text-muted">Block #</span>

@@ -24,20 +24,20 @@
   text-overflow: ellipsis;
 }
 
-.nc-popover-arrow 
+.nc-popover-arrow
 {
   &.dark {
-    .pt-popover-arrow:before {   
+    .pt-popover-arrow:before {
       background-color: #394b59;
     }
   }
   &.white {
-    .pt-popover-arrow:before {   
+    .pt-popover-arrow:before {
       background-color: white;
     }
   }
   &.shadow {
-    .pt-popover-arrow:before {   
+    .pt-popover-arrow:before {
       box-shadow: @border-color 0px 0px 4px 4px !important;
     }
   }
@@ -51,4 +51,17 @@
 
 .nc-minimal-btn-shadow {
   box-shadow: 0 0 0 1px @muted-blue !important;
+}
+
+body {
+  // background-image: url(/public/img/background/circuit_grid.png);
+  // background: linear-gradient(to bottom,#f6f8fe 0,rgba(255,255,255,0) 20%,rgba(255,255,255,0) 100%),url(https://aion.network/material/views/aion/assets/img/circuit_grid.png) no-repeat top right;
+
+  // background-color: #f6f8fe;
+  background: #f2f3fd;
+  // background-image: url(https://aion.network/material/views/aion/assets/img/circuit_grid.png);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  content: "";
 }

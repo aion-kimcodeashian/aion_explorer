@@ -21,9 +21,9 @@
 
 // table styles -------------------------------------------
 
-.NCTableTransactionsRT 
+.NCTableTransactionsRT
 {
-  .table-row 
+  .table-row
   {
     border-bottom: 1px solid @border-color;
     border-collapse: collapse;
@@ -32,18 +32,21 @@
     line-height: 18px;
   }
 
-  .column 
+  .column
   {
     .nc-elipses;
     padding-right: 10px;
   }
 
-  .header 
+  .header
   {
-    //background-color: @gray-background-color;
-    background-color: #f5f8fa;
-    font-weight: 500;
-
+    // background-color: @gray-background-color;
+    // background-color: #f5f8fa;
+    background-color: #12173A;
+    // color: @teal;
+    color: white;
+    // font-weight: 500;
+    font-weight: 400;
     .txn-arrow .pt-icon-arrow-right {
         display: none;
     }
@@ -55,7 +58,7 @@
   {
     font-weight: 300;
 
-    .txn-fromEntity, .txn-toEntity 
+    .txn-fromEntity, .txn-toEntity
     {
       .arrow-icon {
         display: none;
@@ -64,8 +67,12 @@
 
     &.table-row {
       cursor: pointer;
+
+      background-color: white;
       &:hover {
-        background: rgba(19, 124, 189, 0.15);
+        // background: rgba(19, 124, 189, 0.15);
+        // background-color: rgba(140, 116, 241, 0.1);
+        background-color: rgba(167, 182, 194, 0.3);
       }
     }
 
@@ -74,23 +81,23 @@
     }
   }
 
-  .pt-icon-arrow-right 
+  .pt-icon-arrow-right
   {
     font-size: 18px;
   }
 
 
-  @media all and (min-width: 100px) 
+  @media all and (min-width: 100px)
   {
-    .header 
+    .header
     {
-      .txn-entityContainer 
+      .txn-entityContainer
       {
-        flex-direction: row;  
+        flex-direction: row;
 
-        .txn-arrow 
+        .txn-arrow
         {
-          .pt-icon-arrow-right 
+          .pt-icon-arrow-right
           {
             display: inline-block;
             padding: 0 7px;
@@ -113,11 +120,11 @@
         padding-bottom: 5px;
       }
 
-      .txn-fromEntity, .txn-toEntity 
+      .txn-fromEntity, .txn-toEntity
       {
         position: relative;
 
-        .NCEntityLabel { 
+        .NCEntityLabel {
           padding-right: 30px;
         }
 
@@ -131,7 +138,7 @@
     }
 
 
-    .txn-entityContainer 
+    .txn-entityContainer
     {
       .vertical-growing;
       width: @txn-entityContainer-width;
@@ -140,45 +147,3 @@
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

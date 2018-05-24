@@ -68,10 +68,27 @@ h5 {
 }
 body {
   background: #f2f3fd;
+}
+body:after {
+  content: "";
+  background-image: url(https://aion.network/material/views/aion/assets/img/circuit_grid.png);
   background-position: 100% 0;
   background-repeat: no-repeat;
   background-size: 60%;
-  content: "";
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+}
+a {
+  color: #4221cc;
+}
+a:hover {
+  color: #4221cc;
 }
 .NCNonIdealState .pt-non-ideal-state {
   max-width: none;
@@ -113,8 +130,11 @@ body {
   margin-top: 15px;
   font-weight: 300;
 }
-.pt-intent-primary {
+.pt-button.pt-intent-primary {
   color: #5af0bd !important;
+}
+.pt-tag.pt-intent-primary {
+  color: #4221cc !important;
 }
 .NCKPIGroup {
   display: inline-block;
@@ -353,7 +373,7 @@ body {
   border-color: rgba(16, 22, 26, 0.15);
 }
 .NCCardBlock .block-card.non-empty-block {
-  border-color: rgba(19, 124, 189, 0.4);
+  border-color: #4221cc;
 }
 .NCCardBlock .block-card.card-hover:hover {
   border-radius: 3px;
@@ -449,6 +469,7 @@ body {
   padding: 5px 10px;
   line-height: 20px;
   font-size: 14px;
+  background: rgba(0, 0, 0, 0.09) !important;
 }
 .NCTimescale .pt-icon-arrow-right {
   font-size: 16px;
@@ -833,7 +854,7 @@ body {
   }
 }
 pre {
-  background-color: #f5f8fa;
+  background-color: white;
   border-color: #a7b6c2;
   padding: 13px 15px 15px;
   min-height: 88px;
@@ -881,7 +902,7 @@ pre {
 .NCTable .NCColumnHeaderCell .header-icon {
   font-size: 14px;
   margin-right: 6px;
-  color: #738694;
+  color: white;
 }
 .NCTable .NCColumnHeaderFilter {
   padding: 0 5px 4px 5px;
@@ -966,7 +987,7 @@ pre {
   cursor: pointer;
 }
 .NCLink.enabled:hover .text {
-  color: #106ba3;
+  color: #4221cc;
   text-decoration: underline;
 }
 .NCTitle.page {
@@ -1545,7 +1566,7 @@ pre {
 }
 .NCEntityDetail .subtitle {
   font-size: 13px;
-  color: #5C7080;
+  color: #4221cc;
   font-weight: 400;
   padding-left: 7px;
 }
@@ -1654,13 +1675,13 @@ pre {
   vertical-align: bottom;
   margin: 0 15px -2px 15px;
   font-size: 24px;
-  border-left: 1px solid #5c7080;
+  border-left: 1px solid #5af0bd;
   height: 30px;
 }
 .NCExplorerPage .NCExplorerHead .title-row .left .title .desc {
   font-family: 'Titillium Web', sans-serif;
   margin-bottom: 0px;
-  color: #106ba3;
+  color: #4221cc;
   font-weight: 200;
   font-size: 20px;
   flex-grow: 1;
@@ -1723,8 +1744,28 @@ pre {
 .pt-icon-circle-arrow-right {
   color: #12173A !important;
 }
-.pt-popover-content {
+.bp-table-quadrant-main .bp-table-quadrant-scroll-container {
+  background-color: white !important;
+}
+.bp-table-top-container,
+.bp-table-header:before,
+.bp-table-menu {
   background-color: #12173A !important;
+}
+.bp-table-row-name,
+.bp-table-column-name-text {
+  color: white !important;
+  font-weight: 400 !important;
+}
+.block-link.pt-button {
+  color: #4221cc !important;
+}
+.pt-tab[aria-selected="true"],
+.pt-tab:not([aria-disabled="true"]):hover {
+  color: #4221cc;
+}
+.pt-tab-indicator {
+  background-color: #5af0bd !important;
 }
 .NCGraphZoom {
   fill: none;

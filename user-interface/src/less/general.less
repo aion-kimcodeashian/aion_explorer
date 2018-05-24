@@ -60,8 +60,30 @@ body {
   // background-color: #f6f8fe;
   background: #f2f3fd;
   // background-image: url(https://aion.network/material/views/aion/assets/img/circuit_grid.png);
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-  background-size: 60%;
-  content: "";
+  // background-position: 100% 0;
+  // background-repeat: no-repeat;
+  // background-size: 60%;
+  // content: "";
+  &:after {
+    content: "";
+    background-image: url(https://aion.network/material/views/aion/assets/img/circuit_grid.png);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    // height: 120%;
+    position: fixed;
+    z-index: -1;
+    overflow: hidden;
+  }
+}
+a {
+  color: @purple;
+  &:hover {
+    color: @purple;
+  }
 }

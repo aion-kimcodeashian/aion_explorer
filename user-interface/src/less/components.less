@@ -65,8 +65,7 @@
 
   .group-title
   {
-    // color: @pt-icon-color;
-    color: @teal;
+    color: @pt-icon-color;
     display: block;
     font-size: 19px;
     margin: 0 0 15px 0;
@@ -77,8 +76,9 @@
     strong {
       font-family: inherit;
       font-weight: 400;
+      // font-weight: 500;
       // color: @pt-heading-color;
-      color: white;
+      color: @indigo;
     }
   }
 
@@ -193,7 +193,6 @@
     .NCKPIGroup
     {
       box-shadow: 0 0 12px 1px rgba(0,0,0,.1);
-      background-color: @indigo;
       .NCKPIGroupSmall;
     }
   }
@@ -744,7 +743,11 @@ pre
   .icon {
     line-height: inherit;
     // color: @pt-icon-color
-    color: @purple;
+    // color: @purple;
+    // color: @indigo;
+    // color: @light-gray1;
+    // color: red;
+    color: #5c7080;
   }
 
   .text {
@@ -758,7 +761,8 @@ pre
       cursor: pointer;
       .text {
         // color: @pt-link-color;
-        color: @indigo;
+        // color: @indigo;
+        color: @purple;
         text-decoration: underline;
       }
     }
@@ -1864,5 +1868,11 @@ pre
 
 .pt-menu-item::before, .pt-menu-item::after
 {
-  color: #4221cc
+  // color: @purple;
+}
+.pt-icon-circle-arrow-right {
+  color: @indigo !important;
+}
+.pt-popover-content {
+  background-color: @indigo !important;
 }

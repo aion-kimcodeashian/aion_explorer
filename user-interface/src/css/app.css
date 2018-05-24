@@ -123,7 +123,7 @@ body {
   text-align: left;
 }
 .NCKPIGroup .group-title {
-  color: #5af0bd;
+  color: #5c7080;
   display: block;
   font-size: 19px;
   margin: 0 0 15px 0;
@@ -134,7 +134,7 @@ body {
 .NCKPIGroup .group-title strong {
   font-family: inherit;
   font-weight: 400;
-  color: white;
+  color: #12173A;
 }
 .NCKPIGroup .NCKPI:not(:last-of-type) {
   margin-right: 15px;
@@ -215,7 +215,6 @@ body {
 }
 .NCDashboard .NCKPIContainer .NCKPIGroup {
   box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.1);
-  background-color: #12173A;
   padding: 15px;
 }
 .NCDashboard .NCKPIContainer .NCKPIGroup .group-title {
@@ -940,7 +939,7 @@ pre {
 }
 .NCEntityLabel .icon {
   line-height: inherit;
-  color: #4221cc;
+  color: #5c7080;
 }
 .NCEntityLabel .text {
   line-height: inherit;
@@ -950,7 +949,7 @@ pre {
   cursor: pointer;
 }
 .NCEntityLabel.active:hover .text {
-  color: #12173A;
+  color: #4221cc;
   text-decoration: underline;
 }
 .NCLink {
@@ -1721,9 +1720,11 @@ pre {
   font-weight: 300;
   padding: 9px 7px;
 }
-.pt-menu-item::before,
-.pt-menu-item::after {
-  color: #4221cc;
+.pt-icon-circle-arrow-right {
+  color: #12173A !important;
+}
+.pt-popover-content {
+  background-color: #12173A !important;
 }
 .NCGraphZoom {
   fill: none;
@@ -2082,8 +2083,7 @@ pre {
 .NCTableTransactionsRT .header {
   background-color: #12173A;
   color: white;
-  font-weight: 400;
-  border-bottom: 1px solid #8a9ba8;
+  font-weight: 500;
 }
 .NCTableTransactionsRT .header .txn-arrow .pt-icon-arrow-right {
   display: none;
@@ -2100,7 +2100,7 @@ pre {
   background-color: white;
 }
 .NCTableTransactionsRT .body.table-row:hover {
-  background-color: rgba(167, 182, 194, 0.3);
+  background-color: #e4e9ed;
 }
 .NCTableTransactionsRT .body .column {
   padding-left: 2px;

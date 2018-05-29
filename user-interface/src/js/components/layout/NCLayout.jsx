@@ -74,7 +74,7 @@ class NCLayout extends Component {
           text="Testnet Conquest"/>
         <MenuItem
           className="nav-option"
-          onClick={() => window.open("https://testnet1.aion.network")}
+          onClick={() => window.open("https://testnet2.aion.network")}
           text="Testnet Ascent"/>
       </Menu>
     );

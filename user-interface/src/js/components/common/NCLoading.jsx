@@ -13,8 +13,8 @@ export default class NCLoading extends Component
           paddingTop: `${marginTop}px`,
           paddingBottom: `${marginBottom}px`,
         }}>
-        <Spinner className={""} intent={ Intent.PRIMARY } />
-        <span className={"title pt-text-muted"}>{ title }</span>
+        <Spinner className={"pt-dinner"} style={{stroke: '#4221cc'}}/>
+        <span className={"title"} style={{color: '#4221cc'}}>{ title }</span>
       </div>
     );
   }

@@ -21,7 +21,7 @@ export default class NCTopLevelSearch extends Component
   }
 
   submitQuery = () => {
-    if (!nc_isStrEmpty(this.state.queryStr)) 
+    if (!nc_isStrEmpty(this.state.queryStr))
     {
       let queryStr = nc_trim(this.state.queryStr);
       let entity = this.state.entity;
@@ -34,7 +34,7 @@ export default class NCTopLevelSearch extends Component
       });
     }
   }
-  
+
   setQueryStr = (str) => {
     this.setState({
       queryStr: str
@@ -46,21 +46,21 @@ export default class NCTopLevelSearch extends Component
             <Popover
                 content={
                     <Menu>
-                        <MenuItem 
+                        <MenuItem
                           text={ NCEntityInfo[NCEntity.BLOCK].name }
                           onClick={() => {
                             this.setState({
                               entity: NCEntity.BLOCK
                             });
                           }}/>
-                        <MenuItem 
+                        <MenuItem
                           text={ NCEntityInfo[NCEntity.TXN].name }
                           onClick={() => {
                             this.setState({
                               entity: NCEntity.TXN
                             });
                           }}/>
-                        <MenuItem 
+                        <MenuItem
                           text={ NCEntityInfo[NCEntity.ACCOUNT].name }
                           onClick={() => {
                             this.setState({
@@ -69,9 +69,9 @@ export default class NCTopLevelSearch extends Component
                           }}/>
                     </Menu>
                 }
-                
+
                 position={Position.BOTTOM_RIGHT}>
-                <Button className={"pt-minimal"} rightIconName={"caret-down"}>
+                <Button className={"pt-minimal pt-min-toplvl"} rightIconName={"caret-down"}>
                     {NCEntityInfo[this.state.entity].name}
                 </Button>
             </Popover>
@@ -88,7 +88,7 @@ export default class NCTopLevelSearch extends Component
           onKeyPress={(e) => { if(e.key === 'Enter'){ this.submitQuery() }}}
           leftIconName="search"
           rightElement={permissionsMenu}/>
-          <Button 
+          <Button
               className="pt-button pt-minimal pt-intent-primary pt-icon-arrow-right main-search-btn"
               intent={Intent.PRIMARY}
               leftIconName="filter"
@@ -98,51 +98,3 @@ export default class NCTopLevelSearch extends Component
     );
   }
 }
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

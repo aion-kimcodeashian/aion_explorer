@@ -70,26 +70,26 @@ class NCLayout extends Component {
         <MenuDivider title="Switch Network" />
         <MenuItem
           className="nav-option"
-          onClick={() => window.open("https://testnet2.aion.network")}
-          text="Testnet-2"/>
+          onClick={() => window.open("https://conquest.aion.network")}
+          text="Testnet Conquest"/>
         <MenuItem
           className="nav-option"
-          onClick={() => window.open("https://testnet1.aion.network")}
-          text="Testnet-1"/>
+          onClick={() => window.open("https://testnet2.aion.network")}
+          text="Testnet Ascent"/>
       </Menu>
     );
   }
 
-  render() 
+  render()
   {
     const pathname = this.props.location.pathname;
 
     let kpi = this.props.kpi;
 
 
-    
+
     // wait on the response from KPI list to load application
-    if (NCNETWORK_REQUESTS_ENABLED && kpi.momentUpdated == null) { 
+    if (NCNETWORK_REQUESTS_ENABLED && kpi.momentUpdated == null) {
       return (
         <NCLoading
           title={"Connecting to Server"}
@@ -104,9 +104,9 @@ class NCLayout extends Component {
       latestBlockNumber = kpi.data.dbBlockTableHead;
     } else {
       latestBlockNumber = kpi.data.endBlock;
-    } 
+    }
 
-    let dbLag = (kpi.data.currentBlockchainHead && latestBlockNumber) ? 
+    let dbLag = (kpi.data.currentBlockchainHead && latestBlockNumber) ?
                 BigNumber(kpi.data.currentBlockchainHead).minus(BigNumber(latestBlockNumber)) : 0;
     let lastUpdated = kpi.momentUpdated;
 
@@ -114,34 +114,34 @@ class NCLayout extends Component {
       <div className="NCPage">
         <div className="NCHeader pt-navbar">
           <div className="row">
-            
+
             <div className="pt-navbar-group navbar-group-left">
               <Link to={"/dashboard"} className="logo">
                 <img className="logo-img" src="img/logo/aion-icon.svg" alt="logo"/>
                 <span className="title">Dashboard</span>
               </Link>
-              <span className="pt-navbar-divider"></span>              
+              <span className="pt-navbar-divider"></span>
               <Popover
                 content={this.renderExplorerMenu()}
                 interactionKind={PopoverInteractionKind.CLICK}
                 position={Position.BOTTOM}>
-                <Button 
+                <Button
                   className="navbar-btn-active pt-button pt-minimal"
                   iconName="pt-icon-dashboard"
                   rightIconName="pt-icon-caret-down"
-                  text="Explorer"/>          
+                  text="Explorer"/>
               </Popover>
-              {/*<Button 
+              {/*<Button
                   className="navbar-btn-active pt-button pt-minimal"
                   iconName="timeline-bar-chart"
                   onClick={() => window.open("https://metrics0.aion.network", "Aion | Metrics")}
-                  text="Metrics"/>*/}   
+                  text="Metrics"/>*/}
             </div>
 
             <div className="pt-navbar-group navbar-group-right">
               <NCTopLevelSearch/>
               <span className="pt-navbar-divider"></span>
-              <NCLivenessIndicator 
+              <NCLivenessIndicator
                 momentEnd={momentEnd}
                 latestBlockNumber={latestBlockNumber}
                 dbLag={dbLag}
@@ -151,17 +151,17 @@ class NCLayout extends Component {
                 content={this.renderConnectionMenu()}
                 interactionKind={PopoverInteractionKind.CLICK}
                 position={Position.BOTTOM_RIGHT}>
-                <Button 
+                <Button
                   className="navbar-btn-active pt-button pt-minimal"
                   rightIconName="pt-icon-caret-down"
-                  text="Mainnet"/>          
+                  text="Mainnet"/>
               </Popover>
 
             </div>
 
           </div>
         </div>
-        
+
         <div className="NCPageContent">
           <div className="container">
           { this.props.children }
@@ -183,35 +183,3 @@ export default connect((state) => {
     kpi: state.kpi,
   })
 })(NCLayout);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
